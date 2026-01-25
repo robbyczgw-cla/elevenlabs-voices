@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+.usage.json
+samples/
+batch_output/
+sfx_output/
+*.mp3
