@@ -200,5 +200,12 @@
     "en-US": ["rachel", "adam", "bella", "brian", "callum", "jessica", "matilda", "river", "roger", "eric", "chris", "will", "liam"],
     "en-GB": ["george", "alice", "lily", "daniel"],
     "en-AU": ["charlie"]
-  }
+  },
+  "supported_languages": [
+    "en", "de", "es", "fr", "it", "pt", "pl", "nl", "sv", "da", "fi", "no",
+    "tr", "ru", "uk", "cs", "sk", "hu", "ro", "bg", "hr", "el", "hi", "ta",
+    "id", "ms", "vi", "th", "ja", "ko", "zh", "ar"
+  ],
+  "model": "eleven_multilingual_v2",
+  "version": "2.0.0"
 }

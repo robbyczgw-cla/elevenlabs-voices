@@ -1,83 +1,58 @@
-# ElevenLabs Voice Personas - Published! ✅
+# ElevenLabs Voice Personas v2.0.0
 
-Successfully published to ClawdHub as **elevenlabs-voices@1.0.0**
-
-## Installation
-
-```bash
-clawdhub install elevenlabs-voices
-```
-
-## What's Included
-
-### Voice Personas (14 total)
-
-#### English Voices (8)
-- **Rachel** - Warm American female (default)
-- **Adam** - Deep narrator male
-- **Bella** - Soft young female
-- **Antoni** - Conversational male
-- **Josh** - Professional male
-- **Domi** - Confident female
-- **Elli** - Energetic female
-- **Callum** - Trustworthy British male
-
-#### German Voices (3)
-- **Seraphina** - Professional female
-- **Daniel** - Authoritative male
-- **Clara** - Warm female
-
-#### Spanish Voices (2)
-- **Valentino** - Smooth male
-- **Lucia** - Elegant female
-
-### Files Structure
-
-```
-elevenlabs-voices/
-├── SKILL.md              # Main skill documentation
-├── voices.json           # Voice presets with ElevenLabs IDs
-├── references/
-│   └── voice-guide.md    # Detailed voice descriptions
-├── examples.md           # Usage examples
-└── README.md            # This file
-```
+High-quality voice synthesis with 18 personas, 32 languages, sound effects, and voice design.
 
 ## Quick Start
 
-```javascript
-const voices = require('./voices.json');
+```bash
+# Set your API key
+export ELEVEN_API_KEY="your-key-here"
 
-// Get Rachel voice (default)
-const rachel = voices.voices.rachel;
-console.log(rachel.voice_id); // 21m00Tcm4TlvDq8ikWAM
+# Basic TTS
+python3 scripts/tts.py --text "Hello world" --voice rachel
 
-// Use narrator preset
-const narrator = voices.voices[voices.presets.narrator];
-console.log(narrator.name); // Adam
+# Multi-language
+python3 scripts/tts.py --text "Bonjour!" --voice rachel --lang fr
+
+# Sound effects
+python3 scripts/sfx.py --prompt "Thunder rumbling"
+
+# Batch processing
+python3 scripts/tts.py --batch texts.txt --voice adam --output-dir ./audio
+
+# Usage stats
+python3 scripts/tts.py --stats
 ```
 
 ## Features
 
-✅ 14 professionally-selected voice personas  
-✅ Multi-language support (EN, DE, ES)  
-✅ Voice settings (stability, similarity_boost, style)  
-✅ Persona-based presets  
-✅ Detailed voice guide with use cases  
-✅ Comprehensive usage examples  
+| Feature | Command |
+|---------|---------|
+| TTS | `python3 scripts/tts.py --text "..." --voice NAME` |
+| Languages (32) | `--lang de` (German), `--lang fr` (French), etc. |
+| Streaming | `--stream` |
+| Batch | `--batch file.txt --output-dir ./out` |
+| Sound Effects | `python3 scripts/sfx.py --prompt "..."` |
+| Voice Design | `python3 scripts/voice-design.py --gender female --age young` |
+| Cost Stats | `--stats` |
 
-## ClawdHub Info
+## Voice Presets
 
-- **Slug:** elevenlabs-voices
-- **Version:** 1.0.0
-- **ID:** k97cgqqkq4xtd7h62hngzpensx7zxdww
-- **Published:** ✅ Success
+- `narrator` - Documentary style
+- `storyteller` - Audiobooks
+- `professional` - Corporate
+- `educator` - Tutorials
+- `calm` - Meditation
+- `energetic` - Social media
+- `broadcaster` - News
 
-## Next Steps
+## Documentation
 
-1. Install the skill: `clawdhub install elevenlabs-voices`
-2. Read `SKILL.md` for trigger instructions
-3. Check `voice-guide.md` for detailed voice descriptions
-4. See `examples.md` for usage patterns
+- [SKILL.md](SKILL.md) - Full documentation
+- [examples.md](examples.md) - Usage examples
+- [voices.json](voices.json) - Voice configurations
+- [pronunciations.json](pronunciations.json) - Custom pronunciations
 
-Enjoy! 🎙️
+## License
+
+MIT - See ElevenLabs terms for API usage.
