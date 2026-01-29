@@ -10,7 +10,7 @@
 6. [Cost Tracking](#cost-tracking)
 7. [Voice Design](#voice-design)
 8. [Pronunciation Dictionary](#pronunciation-dictionary)
-9. [Clawdbot Integration](#clawdbot-integration)
+9. [Moltbot Integration](#moltbot-integration)
 10. [Advanced Patterns](#advanced-patterns)
 
 ---
@@ -418,11 +418,11 @@ python3 scripts/tts.py --text "Configure your nginx server" --voice rachel --no-
 
 ---
 
-## Clawdbot Integration
+## Moltbot Integration
 
-### Configure Clawdbot TTS
+### Configure Moltbot TTS
 
-Edit `~/.clawdbot/clawdbot.json`:
+Edit `~/.moltbot/moltbot.json`:
 ```json
 {
   "tts": {
@@ -437,7 +437,7 @@ Edit `~/.clawdbot/clawdbot.json`:
 }
 ```
 
-### Using in Clawdbot Chat
+### Using in Moltbot Chat
 
 ```
 User: /tts on

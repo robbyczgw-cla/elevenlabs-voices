@@ -18,7 +18,7 @@ Comprehensive voice synthesis toolkit using ElevenLabs API.
 - **Cost Tracking** - Monitor character usage and estimated costs
 - **Voice Design** - Create custom voices from descriptions
 - **Pronunciation Dictionary** - Custom word pronunciation rules
-- **Clawdbot Integration** - Works with Clawdbot's built-in TTS
+- **Moltbot Integration** - Works with Moltbot's built-in TTS
 
 ---
 
@@ -239,7 +239,7 @@ Edit `pronunciations.json`:
 {
   "rules": [
     {
-      "word": "Clawdbot",
+      "word": "Moltbot",
       "replacement": "Clawd bot",
       "comment": "Pronounce as two words"
     },
@@ -255,7 +255,7 @@ Edit `pronunciations.json`:
 Usage:
 ```bash
 # Pronunciations are applied automatically
-python3 scripts/tts.py --text "The Clawdbot API is great" --voice rachel
+python3 scripts/tts.py --text "The Moltbot API is great" --voice rachel
 
 # Disable pronunciations
 python3 scripts/tts.py --text "The API is great" --voice rachel --no-pronunciations
@@ -288,11 +288,11 @@ python3 scripts/tts.py --stats
 
 ---
 
-## 🤖 Clawdbot TTS Integration
+## 🤖 Moltbot TTS Integration
 
-### Using with Clawdbot's Built-in TTS
+### Using with Moltbot's Built-in TTS
 
-Clawdbot has built-in TTS support that can use ElevenLabs. Configure in `~/.clawdbot/clawdbot.json`:
+Moltbot has built-in TTS support that can use ElevenLabs. Configure in `~/.moltbot/moltbot.json`:
 
 ```json
 {
@@ -310,15 +310,15 @@ Clawdbot has built-in TTS support that can use ElevenLabs. Configure in `~/.claw
 
 ### Triggering TTS in Chat
 
-In Clawdbot conversations:
+In Moltbot conversations:
 - Use `/tts on` to enable automatic TTS
 - Use the `tts` tool directly for one-off speech
 - Request "read this aloud" or "speak this"
 
-### Using Skill Scripts from Clawdbot
+### Using Skill Scripts from Moltbot
 
 ```bash
-# Clawdbot can run these scripts directly
+# Moltbot can run these scripts directly
 exec python3 /path/to/skills/elevenlabs-voices/scripts/tts.py --text "Hello" --voice rachel
 ```
 
@@ -329,7 +329,7 @@ exec python3 /path/to/skills/elevenlabs-voices/scripts/tts.py --text "Hello" --v
 The scripts look for API key in this order:
 
 1. `ELEVEN_API_KEY` or `ELEVENLABS_API_KEY` environment variable
-2. Clawdbot config (`~/.clawdbot/clawdbot.json` → tts.elevenlabs.apiKey)
+2. Moltbot config (`~/.moltbot/moltbot.json` → tts.elevenlabs.apiKey)
 3. Skill-local `.env` file
 
 **Create .env file:**
@@ -401,5 +401,5 @@ elevenlabs-voices/
 - Added cost tracking with `--stats` flag
 - Added voice design tool (`voice-design.py`)
 - Added pronunciation dictionary support
-- Added Clawdbot TTS integration documentation
+- Added Moltbot TTS integration documentation
 - Improved error handling and progress output
