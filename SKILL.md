@@ -1,7 +1,8 @@
 ---
 name: elevenlabs-voices
-description: High-quality voice synthesis with 18 personas, 32 languages, sound effects, batch processing, and voice design using ElevenLabs API.
 version: 2.0.4
+description: High-quality voice synthesis with 18 personas, 32 languages, sound effects, batch processing, and voice design using ElevenLabs API.
+tags: [tts, voice, speech, elevenlabs, audio, sound-effects, voice-design, multilingual]
 ---
 
 # ElevenLabs Voice Personas v2.0
