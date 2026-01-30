@@ -205,16 +205,16 @@ def reset_stats():
 
 
 def get_api_key() -> str:
-    """Get API key from environment or Moltbot config."""
+    """Get API key from environment or OpenClaw config."""
     # Try environment first
     api_key = os.environ.get("ELEVEN_API_KEY") or os.environ.get("ELEVENLABS_API_KEY")
     if api_key:
         return api_key
     
-    # Try Moltbot config (multiple possible locations)
+    # Try OpenClaw config (multiple possible locations)
     config_paths = [
-        Path.home() / ".moltbot" / "moltbot.json",
-        Path("/root/.moltbot/moltbot.json"),
+        Path.home() / ".openclaw" / "openclaw.json",
+        Path("/root/.openclaw/openclaw.json"),
     ]
     
     for config_path in config_paths:
@@ -237,7 +237,7 @@ def get_api_key() -> str:
     print("❌ No ElevenLabs API key found.")
     print("   Options:")
     print("   1. Set ELEVEN_API_KEY environment variable")
-    print("   2. Configure in Moltbot (tts.elevenlabs.apiKey)")
+    print("   2. Configure in OpenClaw (tts.elevenlabs.apiKey)")
     print("   3. Create .env file in skill directory")
     sys.exit(1)
 

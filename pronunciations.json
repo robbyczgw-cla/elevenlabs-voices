@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "rules": [
     {
-      "word": "Moltbot",
+      "word": "OpenClaw",
       "replacement": "Clawd bot",
       "comment": "Pronounce as two words"
     },

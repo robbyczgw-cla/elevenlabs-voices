@@ -30,14 +30,14 @@ SFX_API_URL = "https://api.elevenlabs.io/v1/sound-generation"
 
 
 def get_api_key() -> str:
-    """Get API key from environment or Moltbot config."""
+    """Get API key from environment or OpenClaw config."""
     api_key = os.environ.get("ELEVEN_API_KEY") or os.environ.get("ELEVENLABS_API_KEY")
     if api_key:
         return api_key
     
     config_paths = [
-        Path.home() / ".moltbot" / "moltbot.json",
-        Path("/root/.moltbot/moltbot.json"),
+        Path.home() / ".openclaw" / "openclaw.json",
+        Path("/root/.openclaw/openclaw.json"),
     ]
     
     for config_path in config_paths:
@@ -57,7 +57,7 @@ def get_api_key() -> str:
                 return line.split("=", 1)[1].strip().strip('"\'')
     
     print("❌ No ElevenLabs API key found.")
-    print("   Set ELEVEN_API_KEY environment variable or configure in Moltbot")
+    print("   Set ELEVEN_API_KEY environment variable or configure in OpenClaw")
     sys.exit(1)
 
 

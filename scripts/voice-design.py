@@ -46,14 +46,14 @@ PREVIEW_TEXTS = {
 
 
 def get_api_key() -> str:
-    """Get API key from environment or Moltbot config."""
+    """Get API key from environment or OpenClaw config."""
     api_key = os.environ.get("ELEVEN_API_KEY") or os.environ.get("ELEVENLABS_API_KEY")
     if api_key:
         return api_key
     
     config_paths = [
-        Path.home() / ".moltbot" / "moltbot.json",
-        Path("/root/.moltbot/moltbot.json"),
+        Path.home() / ".openclaw" / "openclaw.json",
+        Path("/root/.openclaw/openclaw.json"),
     ]
     
     for config_path in config_paths:
@@ -187,7 +187,7 @@ def save_voice_to_library(voice_id: str, name: str, description: str, api_key: s
         "voice_name": name,
         "voice_description": description or f"Custom voice: {name}",
         "generated_voice_id": voice_id,
-        "labels": {"type": "designed", "source": "moltbot-skill"}
+        "labels": {"type": "designed", "source": "openclaw-skill"}
     }
     
     data = json.dumps(payload).encode("utf-8")
