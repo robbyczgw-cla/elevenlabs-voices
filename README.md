@@ -1,13 +1,23 @@
-# ElevenLabs Voice Personas v2.0.0
+# ElevenLabs Voice Personas v2.1.0
 
 High-quality voice synthesis with 18 personas, 32 languages, sound effects, and voice design.
 
 ## Quick Start
 
+**First time?** Run the setup wizard:
 ```bash
-# Set your API key
-export ELEVEN_API_KEY="your-key-here"
+python3 scripts/setup.py
+```
 
+This guides you through API key configuration, voice selection, and preferences. Your settings are stored locally in `config.json` (never shared, always in `.gitignore`).
+
+**Or set your API key manually:**
+```bash
+export ELEVEN_API_KEY="your-key-here"
+```
+
+**Then start using:**
+```bash
 # Basic TTS
 python3 scripts/tts.py --text "Hello world" --voice rachel
 

@@ -1,13 +1,35 @@
 ---
 name: elevenlabs-voices
-version: 2.0.4
+version: 2.1.0
 description: High-quality voice synthesis with 18 personas, 32 languages, sound effects, batch processing, and voice design using ElevenLabs API.
 tags: [tts, voice, speech, elevenlabs, audio, sound-effects, voice-design, multilingual]
 ---
 
-# ElevenLabs Voice Personas v2.0
+# ElevenLabs Voice Personas v2.1
 
 Comprehensive voice synthesis toolkit using ElevenLabs API.
+
+## 🚀 First Run - Setup Wizard
+
+When you first use this skill (no `config.json` exists), run the interactive setup wizard:
+
+```bash
+python3 scripts/setup.py
+```
+
+The wizard will guide you through:
+1. **API Key** - Enter your ElevenLabs API key (required)
+2. **Default Voice** - Choose from popular voices (Rachel, Adam, Bella, etc.)
+3. **Language** - Set your preferred language (32 supported)
+4. **Audio Quality** - Standard or high quality output
+5. **Cost Tracking** - Enable usage and cost monitoring
+6. **Budget Limit** - Optional monthly spending cap
+
+**🔒 Privacy:** Your API key is stored locally in `config.json` only. It never leaves your machine and is automatically excluded from git via `.gitignore`.
+
+To reconfigure at any time, simply run the setup wizard again.
+
+---
 
 ## ✨ Features
 
@@ -241,7 +263,7 @@ Edit `pronunciations.json`:
   "rules": [
     {
       "word": "OpenClaw",
-      "replacement": "Clawd bot",
+      "replacement": "Open Claw",
       "comment": "Pronounce as two words"
     },
     {
@@ -369,10 +391,12 @@ Each voice has tuned settings for optimal output:
 elevenlabs-voices/
 ├── SKILL.md              # This documentation
 ├── README.md             # Quick start guide
+├── config.json           # Your local config (created by setup, in .gitignore)
 ├── voices.json           # Voice definitions & settings
 ├── pronunciations.json   # Custom pronunciation rules
 ├── examples.md           # Detailed usage examples
 ├── scripts/
+│   ├── setup.py          # Interactive setup wizard
 │   ├── tts.py            # Main TTS script
 │   ├── sfx.py            # Sound effects generator
 │   └── voice-design.py   # Voice design tool
@@ -393,6 +417,12 @@ elevenlabs-voices/
 ---
 
 ## 📋 Changelog
+
+### v2.1.0
+- Added interactive setup wizard (`scripts/setup.py`)
+- Onboarding guides through API key, voice, language, quality, and budget settings
+- Config stored locally in `config.json` (added to `.gitignore`)
+- Professional, privacy-focused setup experience
 
 ### v2.0.0
 - Added 32 language support with `--lang` parameter
