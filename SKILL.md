@@ -46,7 +46,7 @@ To reconfigure at any time, simply run the setup wizard again.
 
 ---
 
-## 🎙️ Available Voices
+## 🎙 Available Voices
 
 | Voice | Accent | Gender | Persona | Best For |
 |-------|--------|--------|---------|----------|
@@ -348,7 +348,7 @@ exec python3 /path/to/skills/elevenlabs-voices/scripts/tts.py --text "Hello" --v
 
 ---
 
-## ⚙️ Configuration
+## ⚙ Configuration
 
 The scripts look for API key in this order:
 
@@ -364,7 +364,7 @@ echo 'ELEVEN_API_KEY=your-key-here' > .env
 
 ---
 
-## 🎛️ Voice Settings
+## 🎛 Voice Settings
 
 Each voice has tuned settings for optimal output:
 
