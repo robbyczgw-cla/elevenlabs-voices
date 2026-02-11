@@ -1,4 +1,4 @@
-# ElevenLabs Voice Personas v2.1.0
+# ElevenLabs Voice Personas v2.1.5
 
 High-quality voice synthesis with 18 personas, 32 languages, sound effects, and voice design.
 

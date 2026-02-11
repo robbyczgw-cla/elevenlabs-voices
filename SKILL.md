@@ -353,13 +353,14 @@ exec python3 /path/to/skills/elevenlabs-voices/scripts/tts.py --text "Hello" --v
 The scripts look for API key in this order:
 
 1. `ELEVEN_API_KEY` or `ELEVENLABS_API_KEY` environment variable
-2. OpenClaw config (`~/.openclaw/openclaw.json` → tts.elevenlabs.apiKey)
-3. Skill-local `.env` file
+2. Skill-local `.env` file (in the skill directory)
 
 **Create .env file:**
 ```bash
 echo 'ELEVEN_API_KEY=your-key-here' > .env
 ```
+
+> **Note:** The skill no longer reads from `~/.openclaw/openclaw.json`. Use environment variables or the skill-local `.env` file.
 
 ---
 
