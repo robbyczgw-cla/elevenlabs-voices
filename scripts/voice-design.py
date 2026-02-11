@@ -51,21 +51,6 @@ def get_api_key() -> str:
     if api_key:
         return api_key
     
-    config_paths = [
-        Path.home() / ".openclaw" / "openclaw.json",
-        Path("/root/.openclaw/openclaw.json"),
-    ]
-    
-    for config_path in config_paths:
-        if config_path.exists():
-            try:
-                config = json.loads(config_path.read_text())
-                api_key = config.get("tts", {}).get("elevenlabs", {}).get("apiKey")
-                if api_key:
-                    return api_key
-            except Exception:
-                continue
-    
     env_file = SKILL_DIR / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
