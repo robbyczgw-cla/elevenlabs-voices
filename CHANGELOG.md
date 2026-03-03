@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.6] - 2026-03-03
+
+### Changed
+- Hardened API key handling and synced OpenClaw metadata/docs.
+
+
 ## [2.1.5] - 2026-02-11
 
 ### Changed
